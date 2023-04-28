@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body>div{
+            border: 3px solid black;
+            width: 50%;
+            height: 20vh;
+            left: 200px;
+            top:300px;
+        }
+        #staticDiv{
+            position:static;
+        }
+        #relativeDiv{
+            position: relative;
+        }
+        #fixedDiv{
+            position: fixed;
+        }
+        #absoluteDiv{
+        position: absolute;
+        }
+        
+            
+        
+    </style>
+</head>
+<body>
+    
+    <div>全部的div都是border: 3px solid black;
+        width: 50%;
+        height: 20vh;
+        left: 200px;
+        top:300px;
+    </div>
+    <div id="staticDiv">position:static;(靜態的)沒設position的default就是static</div>
+    <div id="relativeDiv">position: relative;left: 200px;top:300px;有影響,以上個div為基準,</div>
+    <div>這個是static</div>
+    <div id="fixedDiv">position: fixed;像廣告一直固定在上面,left: 200px;top:300px;有影響</div>
+    <div>這個是static</div>
+    <div id="absoluteDiv">position: absolute;left: 200px;top:300px;有影響,以整個頁面為基準,通常搭配relative</div>
+    <div style="position: relative;">
+        <p>relative裡面放absolute</p>
+        <div style="position: absolute;height: 100px;width: 100px;background-color: rgb(45, 141, 224);right:0;bottom: 0;">
+            我是裡面的absolute
+        </div>
+    </div>
+    <div style="position: sticky;left:50%;">position: sticky;left:50%</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>
