@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        #container1{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border: 5px solid rgb(8, 8, 8);;
+            border-style: double;
+            
+        }
+        /* div{
+            border: 1px solid violet;
+        } */
+        #div1{
+            flex-basis: 25vh;
+            text-align: center;
+            
+        }
+        #div2{
+            flex-basis: 10vh;
+            /* text-align: center; */
+            border-top: 5px solid black;
+            border-bottom: 2px solid black;
+            width: 70%;
+            margin: 0px auto;
+            
+        }
+        #div3{
+            flex-basis: 35vh;
+            text-align: center;
+            
+            
+            
+        }
+        #div4{
+            flex-basis: 20vh;
+            
+        }
+        ul{
+            list-style-type: none;
+            margin-top: 2%;
+               
+        }
+        li{
+            
+            display: inline-block;
+        }
+        a{  
+            display: inline-block;
+            font-size: 30px;
+            
+            text-align: center;
+            
+            text-decoration: none;
+            width: 230px;    
+        }
+        p{
+            text-align: center;
+            font-size: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container1">
+    <div id="div1">
+        <img src="./img/logo.png" style="padding-top: 3%;">
+    </div>
+    <!-- <hr style="width:65%;text-align:left;height:5px;background-color:black;"> -->
+    <div id="div2">
+        <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">FOR SELL</a></li>
+            <li><a href="">REPAIRS</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">CONTACT</a></li>
+        </ul>
+    </div>
+    <!-- <hr style="width:65%;text-align:left;height:3px;background-color:black;"> -->
+    <div id="div3">
+        <img src="./img/content.png" style="padding-top: 3%;width: 70%;">
+    </div>
+    <div id="div4"><p style="padding-top: 1%;">Lorem, ipsum dolor sit amet consectetur adipisicing elit.Sed, ad facilis dolores doloremque rem nostrum, commodi <br>
+                    impedit magni voluptatum quisquam consequuntur, explicabo eaque asperiores. Dolores rem eveniet non dolor <br>
+                    sapiente.</p></div>
+                </div>
+</body>
+</html>

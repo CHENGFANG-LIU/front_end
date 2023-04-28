@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link{
+            color: aqua;
+        }
+        a:visited{
+            color: blueviolet;
+        }
+        a:hover{
+            color: brown;
+        }
+        a:active{
+            color: blue;
+        }
+        input:focus{
+            background-color: palevioletred;
+        }
+        p:nth-child(even){
+            color: rgb(152, 219, 36);
+        }
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+        }
+        tr:nth-child(even){
+            background-color: rgba(227, 230, 222, 0.87);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- :為偽元素Pseudo-elements -->
+    <a href="./cssplace.html">Pseudo-elements</a>
+
+    <form>
+        <p>
+            <label for="name">名字</label>
+            <input type="text" name="name" id="name">
+        </p>
+        <p>
+            <label for="age">年紀</label>
+            <input type="number" name="age" id="age">
+        </p>
+        <p>
+            <label for="phone">電話</label>
+            <input type="tel" name="phone" id="phone">
+        </p>
+        <p>
+            <label for="address">地址</label>
+            <input type="text" name="address" id="address">
+        </p>
+        
+    </form>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

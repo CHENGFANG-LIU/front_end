@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 在要換行的兩個東西中間加 ,他自身是個寬度100%的存在*/
+
+        .clear_fix{
+            clear: both;
+            /* height: 20px;
+            background-color: black; */
+        }
+        .sp{
+            background-color: aquamarine;
+            border: 1px solid violet;
+            width: 20%;
+            height: 20vh;
+        }
+        #div1,#div2,#div3{
+            float: right;
+        }
+        #div4,#div5,#div6,#div7{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" class="sp"></div>
+    <div id="div2" class="sp"></div>
+    <div id="div3" class="sp"></div>
+    <div class="clear_fix"></div>
+    <div id="div4" class="sp"></div>
+    <div id="div5" class="sp"></div>
+    <div id="div6" class="sp"></div>
+    <div id="div7" class="sp"></div>
+    
+</body>
+</html>

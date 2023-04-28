@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .containerRow{
+            display: flex;
+            height: 100vh;
+            flex-direction: row;
+            align-items: center;
+            background-color: bisque;
+        }
+        .item{
+            flex-basis: 300px;
+            height: 300px;
+
+
+        }
+        .containerRow1{
+            justify-content :space-between;
+        }
+        
+        .item1{
+            background-color: aliceblue;
+        }
+        .containerRow2{
+            justify-content :space-between;
+        }
+        
+        .item2{
+            flex-basis: 100%;
+            display: flex;
+            height: 100vh;
+            flex-direction: row;
+            align-items: center;
+            
+        }
+        .item41{
+            background-color: rgb(6, 237, 245);
+            flex-basis: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content :space-around;
+            height: 100vh;
+            align-items: center;
+        }
+        .item42{
+            background-color: rgb(236, 117, 211);
+            flex-basis: 80%;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content :space-around;
+            align-items: center;
+        }
+        .item411{
+            background-color: rgb(161, 145, 248);
+            flex-basis: 200px;
+            width: 200px;
+        }
+        .item412{
+            background-color: rgb(226, 236, 181);
+            flex-basis: 200px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="containerRow containerRow1">
+        <div class="item item1">
+
+        </div>
+        <div class="item item1">
+
+        </div>
+        <div class="item item1">
+
+        </div>
+
+    </div>
+    <div class="containerRow containerRow2">
+        <div class="item item2">
+            <div class="item item41">
+                <div class="item411"></div>
+                <div class="item411"></div>
+                <div class="item411"></div>
+            </div>
+            <div class="item item42">
+                <div class="item412"></div>
+                <div class="item412"></div>
+                <div class="item412"></div>
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

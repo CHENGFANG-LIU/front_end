@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border:1px solid black;
+            background-color: lightcyan;
+           
+        }
+        /* 飄起來高度就會不見，外框就沒辦法包起來，所以要用clear:both讓外框能包到已經float的物件 */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+            }
+        img{
+            float:right;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        
+        <img src='https://imgs.gvm.com.tw/upload/gallery/20221204/125075.jpg'>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, labore? Excepturi totam officia libero vitae sapiente quasi alias ipsa in! Accusamus hic facere sint voluptatum optio vitae aliquam iste voluptates!</p>
+    </div>
+</body>
+</html>

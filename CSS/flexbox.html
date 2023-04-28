@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            /* you need to first define a flex container. */
+            display: flex;
+            background-color: blue;
+            padding: 30px;
+            /* 直的column  橫的row*/
+            flex-direction: row;
+            /* 分散在 container空間中，不能用margin auto*/
+            justify-content: space-around;
+            /* rwd效果 */
+            flex-wrap: wrap;
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: #c0bbbb;
+            margin: 30px;
+            color: #000;
+            font-size: 80px;
+        }
+    </style>
+</head>
+<body>
+    <!-- you need to first define a flex container. -->
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+</body>
+</html>

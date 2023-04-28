@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* simple選擇器 html tag /id/class 盡量先用class*/
+        h1{
+            color: #f70404;
+        }
+        #h2ID{
+            color: orange;
+        }
+        .jkl{
+            color: yellow;
+        }
+        h4,h5,h6{
+            color: #05e918;
+        }
+
+
+        /* 組合選擇器 子代/後代/兄弟/鄰代兄弟 */
+        .my-div{
+            border: 1px solid red;
+            width: 80%;
+            height: 300px;
+            color: #f80202;
+        }
+        /* 子代選擇器 找一層 */
+        .my-div > p{
+            color: forestgreen;
+        }
+
+        /* 後代選擇器 找全部 */
+        /* .my-div p{
+            color: rgb(226, 14, 209);
+        } */
+
+        /* 兄弟選擇器 同一層 */
+        /* .my-div ~ p{
+            color: rgb(122, 6, 230);
+        } */
+
+        /* 鄰代兄弟選擇器 同一層找一個*/
+        /* .my-div + p{
+            color: rgb(122, 6, 230);
+        } */
+
+
+
+    </style>
+</head>
+<body>
+    <h1>h1</h1>
+    <h2 id="h2ID">h2</h2>
+    <h3 class="jkl">h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+
+
+    <div class="my-div">
+        my-div
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+        <div><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p></div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+        
+
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+    
+    
+</body>
+</html>

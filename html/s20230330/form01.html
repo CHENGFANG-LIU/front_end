@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #chinese{
+            width:300px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>form</h1>
+    <!-- name 傳到php會顯示的東西 -->
+    <!-- id 前端標記用  -->
+    <!-- id name 通常用同個名子 -->
+    <!-- for 點下去就可以連到對應 id 的input  -->
+    <!-- action 去網址 mathod get or post -->
+    <form action="" method=""></form>
+        <!-- 表單欄位群組fieldset  legend-->
+        <fieldset>
+            <legend>表單欄位群組</legend>
+            
+            <p>
+                <label for="">姓名</label>
+                <input type="text" name="name" id="name">
+            </p>
+            <p>
+                <label for="">國文</label>
+                <input type="number" name="chinese" id="chinese">
+            </p>
+            <p>
+                <label for="">手機號碼</label>
+                <input type="tel" name="phone" id="phone">
+            </p>
+        </fieldset>
+        
+        <p>
+            <label for="">密碼</label>
+            <input type="password" name="password" id="password">
+        </p>
+        <p>
+            <!-- radio單選的name要設一樣 -->
+            <!-- label放後面好看 -->
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="男">男</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="女">女</label>
+            <input type="radio" name="gender" id="other" value="other">
+            <label for="其他">其他</label>
+        </p>
+        <p>
+            <!-- checkbox 多選 []陣列 array -->
+            <input type="checkbox" name="love[]" id="read">
+            <label for="read">閱讀</label>
+            <input type="checkbox" name="love[]" id="bike">
+            <label for="bike">自行車</label>
+            <input type="checkbox" name="love[]" id="ball">
+            <label for="ball">打球</label>
+        </p>
+        <!-- 隱藏欄位 -->
+        <input type="hidden" name="vip" id="vip" value="good">
+        <!-- file 上傳檔案\ -->
+        <input type="file" name="file" id="file">
+        <!-- date日期 -->
+        <input type="date" name="date" id="date">
+        <!-- textarea 多行文字 -->
+        <textarea name="textarea" id="textarea" cols="50" rows="5"></textarea>
+        <!-- select下拉選單  
+        select不是input
+        option內容
+        html內容不用跟value相同 -->
+        <label for="phone">手機品牌</label>
+        <select name="phone" id="phone" >
+            <option value="1">HTC</option>
+            <option value="2">APPLE</option>
+            <option value="3">ASUS</option>
+        </select>
+        <!-- 送出 -->
+        <p>
+             <input type="submit" name="" id="" value="送出">
+            <input type="reset" value="重設">
+        </p>    
+    </form>
+
+</body>
+</html>

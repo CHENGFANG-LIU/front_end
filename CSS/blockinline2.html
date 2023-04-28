@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline;
+            height: 300px;
+            background-color: bisque;
+            width: 300px;
+        }
+        span{
+            display: block;
+            height: 300px;
+            background-color: bisque;
+            width: 300px;
+        }
+        p{
+            display:inline-block; 
+            height: 300px;
+            background-color: bisque;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 原本div會換行 display: inline;後不會換行 -->
+    <!-- inline的高度和寬度不能調整 -->
+    <div>test</div>
+    <div>test</div>
+    <!-- 原本span不會換行 display: block;會換行 -->
+    <!-- block的高度和寬度可以調整 -->
+    <span>test</span>
+    <span>test</span>
+    <!-- inline-block;可以既不會換行又可以調高度和寬度 -->
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+</body>
+</html>

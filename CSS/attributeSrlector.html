@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 屬性選擇器 */
+        [class^="top"] {
+        background: yellow;}
+        /* 偽屬性+選擇器 */
+        input:not([type="number"]){
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <p>
+            <label for="name">姓名</label>
+            <input name="name" type="text">
+        </p>
+        <p>
+            <label for="phone">電話</label>
+            <input name="phone" type="number">
+        </p>
+        <h2>CSS [attribute^="value"] Selector</h2>
+        <h1 class="top-header">Welcome</h1>
+        <p class="top-text">Hello world!</p>
+        <p class="topcontent">Are you learning CSS?</p>
+        <p class="content">Are you learning CSS?</p>
+    </form>
+    
+</body>
+</html>
