@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1.先做好html -->
+    <input id="number1">
+    <select name="m" id="mselect" >
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="x">x</option>
+        <option value="/">/</option>
+    </select>
+    <input id="number2">
+    <button onclick="giveMeAns()">計算</button>
+    <div id="results" ></div>
+    <script>
+        // 2.綁定
+        let number1=document.getElementById("number1");
+        let number2=document.getElementById("number2");
+        let mselect=document.getElementById("mselect");
+        let results=document.getElementById("results");
+        // 3.function
+        function giveMeAns() {
+            // 4.分流
+            switch (mselect.value){
+                case "+":
+                    results.innerText=Number(number1.value)+Number(number2.value);
+                break;
+                case "-":
+                    results.innerText=Number(number1.value)-Number(number2.value);
+                break;
+                case "x":
+                    results.innerText=Number(number1.value)*Number(number2.value);
+                break;
+                case "/":
+                    results.innerText=Number(number1.value)/Number(number2.value);
+                break;
+
+            }
+            
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <label for="name" >name:</label>
+        <input type="text" id="name">
+    </p>
+    <p>
+        <label for="number" >number:</label>
+        <input type="number" id="number">
+    </p>
+    <button id="myBtn" onclick="btnClick()">
+        送出
+    </button>
+    <hr>
+    <div id="results">
+        結果是
+    </div>
+    
+    <script>
+        // 要先綁定id，再對裡面的值做操作
+        let nameText = document.getElementById('name');
+        let numberText = document.getElementById('number');
+        let myBtnText = document.getElementById('myBtn');
+        let result = document.getElementById('results');
+        function btnClick(){
+                // 把click後的值傳給nameText.value和numberText.value
+            
+            result.innerText = `您好 選的是${nameText.value}${numberText.value}`;
+        }
+        // myBtnText.addEvenListener('click',()=>{
+            
+        //     document.getElementById("results").innerText=nameTextValue+numberText;
+        // })
+        
+        
+
+    </script>
+    <!-- <script>
+        let nameText = document.getElementById('name').value;
+        let numberText = document.getElementById('number').value;
+        let myBtnText = document.getElementById('myBtn');
+        myBtnText.addEvenListener('click',()=>{
+            console.log(nameText);
+            console.log(numberText);
+            document.getElementById("results").innerText=nameText+numberText;
+        })
+    </script> -->
+</body>
+</html>

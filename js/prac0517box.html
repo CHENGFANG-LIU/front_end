@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        img{
+            width: 100%;
+            height: 20vh;
+        }
+        form{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .container-row{
+            display: flex;
+            flex-direction: row;
+        }
+        table{
+            text-align: center;
+            
+        }
+        td{
+            width: 9%;
+            border: 2px solid seashell;
+        }
+        body{
+            background-color: blanchedalmond;
+            
+        }
+        #go_in{
+            width: 100%;
+        }
+        .container-row-between{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+        }
+        .container-row-between p{
+            font-size: 500%;
+        }
+        #box{
+            position: fixed;
+            left: 200px;
+            top:10px;
+            width: 80%;
+            height: 90vh;
+            display: none;
+            background-color: blueviolet;
+            z-index: 5;
+        }
+        #box_close{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: 5%;
+            height: 5vh;
+        }
+        #menu{
+            height: 10vh;
+            background-color: rgb(224, 93, 45);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="menu"><br>MENU</h2>
+    <form>
+    <table>
+        <tr>
+            <td>品項</td>
+            <td>照片</td>
+            <td>價格</td>
+            <td>數量</td>
+            <td>小計</td>
+        </tr>
+        <tr>
+            <td>珍奶</td>
+            <td><img src="./img/pearlmilk.jpg"></td>
+            <td>100</td>
+            <td><input type='number'id="pm_amount"value="0" min="0"></td>
+            <td><p id= "pm_total"  >0</p>  </td>
+        </tr>
+        <tr>
+            <td>紅茶</td>
+            <td><img src="./img/redtea.jpg"></td>
+            <td>50</td>
+            <td><input type='number'id="r_amount" value="0" min="0"></td>
+            <td id="r_total" >0</td>
+        </tr>
+        <tr>
+            <td>綠茶</td>
+            <td><img src="./img/greentea.jpg"></td>
+            <td>60</td>
+            <td><input type='number'id="g_amount" value="0" min="0"></td>
+            <td id="g_total">0</td>
+        </tr>
+
+
+    </table>
+
+    <br>
+    <button id="go_in">計算價錢</button>
+    <p>外帶或內用</p>
+    <select name="phone"  >
+        
+        <option value="1">外帶</option>
+        <option value="2">內用</option>
+        
+    </select>
+
+    <div id="box">
+        <button id="box_close">x</button>
+        <div class="container-row">
+        <h3>總計</h3>
+        <h3 id="total">0</h3>
+        <h3>元</h3>
+        </div>
+
+        <div class="container-row-between">
+            <h2 style="color: red;">300塊打八折</h2>
+            <div class="container-row">
+                <p>應付</p>
+                <p id="final">0</p>
+                <p>元</p>
+            </div>
+        </div>
+
+
+    </div>
+    </form>
+
+
+
+    <script>
+        // 珍奶的
+        pm_amount=document.getElementById("pm_amount");
+        pm_total=document.getElementById("pm_total");
+        pm_total.innerText=0;
+
+        document.getElementById("pm_amount").addEventListener("change",()=>{
+            
+            new_pm_amount=pm_amount.value;
+            pm_total.innerText=Math.abs(new_pm_amount*100);
+
+        });
+        // 紅茶的
+        r_amount=document.getElementById("r_amount");
+        r_total=document.getElementById("r_total");
+        r_total.innerText=0;
+
+        document.getElementById("r_amount").addEventListener("change",()=>{
+            
+            new_r_amount=r_amount.value;
+            r_total.innerText=new_r_amount*50;
+
+        });
+        // 綠茶的
+        g_amount=document.getElementById("g_amount");
+        g_total=document.getElementById("g_total");
+        g_total.innerText=0;
+
+        document.getElementById("g_amount").addEventListener("change",()=>{
+            
+            new_g_amount=g_amount.value;
+            g_total.innerText=new_g_amount*60;
+
+        });
+        // 總計
+        total=document.getElementById('total');
+        final=document.getElementById('final');
+        box=document.getElementById("box");
+        
+        document.getElementById("go_in").addEventListener("click",(e)=>{
+            e.preventDefault();
+            box.style.display='block';
+            
+            total.innerText=Number(pm_total.innerText)+Number(r_total.innerText)+Number(g_total.innerText);
+            console.log(total.innerText);
+            if(total.innerText>300){
+                final.innerText=total.innerText*0.8;
+            
+            }else{
+                final.innerText=total.innerText;
+            }
+        });
+        
+        
+        
+
+
+    </script>
+</body>
+</html>

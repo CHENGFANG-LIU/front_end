@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 80%;
+            height: 20vh;
+        }
+        form{
+            margin: 0 auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+    <table>
+        <tr>
+            <td>品項</td>
+            <td>照片</td>
+            <td>價格</td>
+            <td>數量</td>
+            <td>小計</td>
+        </tr>
+        <tr>
+            <td>珍奶</td>
+            <td><img src="./img/pearlmilk.jpg"></td>
+            <td>100</td>
+            <td><input type='number'id="pm_amount"value="0" min="0"></td>
+            <td><p id= "pm_total"  >0</p>  </td>
+        </tr>
+        <tr>
+            <td>紅茶</td>
+            <td><img src="./img/redtea.jpg"></td>
+            <td>50</td>
+            <td><input type='number'id="r_amount" value="0" min="0"></td>
+            <td id="r_total" >0</td>
+        </tr>
+        <tr>
+            <td>綠茶</td>
+            <td><img src="./img/greentea.jpg"></td>
+            <td>60</td>
+            <td><input type='number'id="g_amount" value="0" min="0"></td>
+            <td id="g_total">0</td>
+        </tr>
+
+
+    </table>
+
+    <p>外帶或內用</p>
+    <select name="phone" id="go_in" >
+        <option value="0">下拉</option>
+        <option value="1">外帶</option>
+        <option value="2">內用</option>
+        
+    </select>
+    <h3>總計</h3>
+    <h3 id="total"></h3>
+
+    <h2>300塊打八折</h2>
+    <h1>應付</h1>
+    <h1 id="final"></h1>
+    </form>
+
+
+
+    <script>
+        
+        const pearlmilk={
+            
+        amount:
+        document.getElementById(this.id).addEventListener("change",()=>{
+            
+            new_pm_amount=pearlmilk.little_count();
+            pm_total.innerText=Math.abs(new_pm_amount*100);
+            return new_pm_amount;
+        }),
+        price:100,
+        
+        // little_count:()=>{
+            
+        //     this.lc=this.amount+this.price;
+        //     console.log(this.lc);
+        //     return this.lc;
+        // }
+        }
+        
+        
+        // 珍奶的
+        
+        // 紅茶的
+        r_amount=document.getElementById("r_amount");
+        r_total=document.getElementById("r_total");
+        r_total.innerText=0;
+
+        document.getElementById("r_amount").addEventListener("change",()=>{
+            
+            new_r_amount=r_amount.value;
+            r_total.innerText=new_r_amount*100;
+
+        });
+        // 綠茶的
+        g_amount=document.getElementById("g_amount");
+        g_total=document.getElementById("g_total");
+        g_total.innerText=0;
+
+        document.getElementById("g_amount").addEventListener("change",()=>{
+            
+            new_g_amount=g_amount.value;
+            g_total.innerText=new_g_amount*100;
+
+        });
+        // 總計
+        total=document.getElementById('total');
+        final=document.getElementById('final');
+        document.getElementById("go_in").addEventListener("change",()=>{
+            
+            total.innerText=Number(pm_total.innerText)+Number(r_total.innerText)+Number(g_total.innerText);
+            console.log(total.innerText);
+            if(total.innerText>300){
+                final.innerText=total.innerText*0.8;
+            
+            }else{
+                final.innerText=total.innerText;
+            }
+        });
+        
+        
+        
+
+
+    </script>
+</body>
+</html>

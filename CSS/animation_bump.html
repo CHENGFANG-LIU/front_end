@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #weather1{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: 80%;
+            top: 1%;
+            width: 20%;
+            z-index: 7;
+            /* 在example裡使用他 */
+            animation-name: box;
+            animation-duration: 2s;
+        }
+        #box {
+            background-color:red; 
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: 80%;
+            top: 1%;
+            width: 20%;
+            z-index: 7;
+  
+  /* 在example裡使用他 */
+  animation-name: box;
+  animation-duration: 2s;
+}
+#box2{
+    width: 20px;
+     height: 20px;
+    background-color:rgb(12, 12, 12);
+     position: absolute;
+     
+     
+     left: 90%;
+     top: 10%;
+}
+
+@keyframes box {
+  0%   { width: 0px;height: 0px;position: absolute;
+     
+     
+     left: 90%;
+     top: 10%;}
+  80%  { width: 0px;height: 0px;position: absolute;
+     
+     
+     left: 90%;
+     top: 10%;}
+  100% { width: 500px;
+            height: 500px;
+            position: absolute;
+            left: 80%;
+            top: 1%;
+            width: 20%;
+            z-index: 7;}
+}
+    </style>
+</head>
+<body>
+    <p id="box"></p>
+    <p id="box2"></p>
+</body>
+</html>
