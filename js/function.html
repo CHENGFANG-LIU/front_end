@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="n1" type="number">
+    
+    <input id="n2" type="number">
+    <div id="result"></div>
+    <script>
+let n1 =document.getElementById("n1");
+let n2 =document.getElementById("n2");
+let new_n1=0;
+let new_n2=0;
+document.getElementById("n1").addEventListener("change",()=>{
+            new_n1=n1.value;
+            
+            
+});
+
+document.getElementById("n2").addEventListener("change",()=>{
+            new_n2=n2.value;
+           
+});
+
+// 放回傳值再執行就可以拿到之前onchange得到的新value
+        function get_sum(num1,num2){
+            let result = num1+num2;
+            return result;
+        }
+        let final =get_sum(new_n1,new_n2);
+
+console.log("執行後的",final);
+    </script>
+</body>
+</html>

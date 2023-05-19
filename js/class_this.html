@@ -1,3 +1,4 @@
+<!-- 沒有用class寫的code在prac0517 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,40 +70,30 @@
 
 
     <script>
-        
+        let pm_amount=document.getElementById("pm_amount");
+        let new_pm_amount=0;
+
         const pearlmilk={
-            
-        amount:
-        document.getElementById(this.id).addEventListener("change",()=>{
-            
-            new_pm_amount=pearlmilk.little_count();
-            pm_total.innerText=Math.abs(new_pm_amount*100);
-            return new_pm_amount;
-        }),
-        price:100,
-        
-        // little_count:()=>{
-            
-        //     this.lc=this.amount+this.price;
-        //     console.log(this.lc);
-        //     return this.lc;
-        // }
+            price:100,
+            function little_total(){
+                this.price
+            },
         }
-        
-        
-        // 珍奶的
-        
-        // 紅茶的
-        r_amount=document.getElementById("r_amount");
-        r_total=document.getElementById("r_total");
-        r_total.innerText=0;
 
-        document.getElementById("r_amount").addEventListener("change",()=>{
+        document.getElementById("pm_amount").addEventListener("change",()=>{
+            new_pm_amount=pm_amount.value;
             
-            new_r_amount=r_amount.value;
-            r_total.innerText=new_r_amount*100;
 
+
+
+
+
+            
         });
+        
+        
+            
+        
         // 綠茶的
         g_amount=document.getElementById("g_amount");
         g_total=document.getElementById("g_total");

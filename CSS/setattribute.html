@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .lightpink{
+            background-color: lightpink,
+        }
+        .purple{
+            background-color: blueviolet,
+
+        }
+        .lightblue{
+            background-color: rgb(121, 181, 235),
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML data-* Attributes 可以自訂義，price可以換成任何值，可以用來藏資料 -->
+    <button onclick="changeColor()"></button>
+    <div style="width: 500px;height: 500px;"  class="lightblue" id='box1'data-price="500" >
+
+    </div>
+
+
+    <!-- <script>
+        let box=document.getElementById("box1");
+        let get_price= box.getAttribute("data-price");
+        // 用藏起來的資料做判斷式或function
+        function changeColor(){
+            if(get_price>1000){
+                box.setAttribute("class",'lightpink');
+
+            }else{
+                box.setAttribute("class",'purple');
+            }
+            
+            
+
+
+
+        }
+
+        
+        
+    </script> -->
+
+</body>
+</html>
