@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="myBtn">good</button>
+    <button type="button" id="myBtn2">noarg</button>
+    <button type="button" id="myBtn3">用arrow this</button>
+    <button type="button" id="myBtn4">this</button>
+    <script>
+        function good(){
+            console.log("good");
+        }
+        const myBtn=document.getElementById("myBtn");
+        myBtn.addEventListener('click',good);
+        
+        let myfunction1=(a,b)=>a+b;
+        console.log(myfunction1(8,9));
+
+        const myBtn2=document.getElementById("myBtn2");
+        myBtn2.addEventListener('click',()=>{
+            console.log('noarg');
+        });
+
+        // one arg
+        let arr1=[1,4];
+        arr1.forEach(element => {
+            console.log(element);
+        });
+
+        let mapArr=arr1.map((value,key)=>value*2);
+        console.log('mapArr',mapArr);
+
+        let mapArr2=arr1.map(value=>value*3);
+        console.log('mapArr2',mapArr2);
+
+
+        // this在箭頭函式console.log出現window
+        const myBtn3=document.getElementById("myBtn3");
+        myBtn3.addEventListener('click',()=>{
+            console.log(this);
+        });
+
+        const myBtn4=document.getElementById("myBtn4");
+        myBtn4.addEventListener('click',function(){
+            console.log(this);
+        });
+
+
+
+    </script>
+</body>
+</html>

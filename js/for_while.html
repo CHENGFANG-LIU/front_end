@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(let i =1;i<=10;i++){
+            document.write(`${i}<br>`);
+        }
+
+        let j =1;
+        while(j<=10){
+            document.write(`${j}<br>`);
+            j++
+        }
+
+        // do while就算沒有完成條件，至少會做一次
+
+let k=1;
+do{
+    document.write(`${k}<br>`);
+    k++;
+}while(k<=10);
+
+for(let a=1;a<=10;a++){
+if(a>=4){
+    break;
+}
+document.write(`${a}<br>`);
+}
+
+for (let b = 1; b <=10; b++) {
+    
+    if(b==4){
+    continue;
+}
+document.write(`${b}<br>`);
+}
+
+let myArr = [50,100,300,20,300,55,100,200,33];
+// 練習一總共的營業額
+let sum1=0;
+for (let my1=0;my1<myArr.length;my1++){
+    
+sum1=sum1+myArr[my1];
+}
+document.write(`${sum1}<br>`);
+
+//練習二 大於等於100總共的營業額是多少
+let sum2=0;
+for (let my2=0;my2<myArr.length;my2++){
+    if(myArr[my2]<100){
+        continue;
+    }
+    sum2=sum2+myArr[my2];
+    }
+    document.write(`${sum2}<br>`);
+
+let fsum2=0;
+myArr.forEach((value)=>{
+    if(value<100){
+        value=0;
+    }
+fsum2=fsum2+value;
+});
+document.write(`${fsum2}<br>`);
+//練習三 小於100總共的營業額是多少
+let sum3=0;
+for (let my3=0;my3<myArr.length;my3++){
+    if(myArr[my3]>=100){
+        continue;
+    }
+    sum3=sum3+myArr[my3];
+    }
+    document.write(`${sum3}<br>`);
+
+    let fsum3=0;
+myArr.forEach((value)=>{
+    if(value>=100){
+        return false;//continue
+    }
+fsum3=fsum3+value;
+});
+document.write(`${fsum3}<br>`);
+// 第一筆300 index多少
+let aaa=[];
+
+    myArr.forEach((value,index)=>{
+        if(value==300){
+        
+            aaa.push(index);
+            console.log(aaa);
+        
+        }
+
+});
+document.write(`${aaa[0]}<br>`);
+
+// document.write(`${index}<br>`);
+
+
+
+
+
+    </script>
+</body>
+</html>

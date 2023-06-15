@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myArr=[1,2,3,4,5,6,7,8,9,10];
+        myArr.forEach(function(value,key){
+            console.log(`${key}=>${value}`);
+        })
+        let newArr=[];
+        myArr.forEach(function(value,key){
+            if(value>5){
+                newArr.push(value*3);
+            }else{
+                newArr.push(value*2);
+            }
+            
+        })
+        console.log(newArr);
+        let mapArr = myArr.map((value,key)=>{
+            if(value>5){
+                return value*3;
+            }else{
+                return value*2;
+            }
+        });
+        console.log(mapArr);
+
+        let myCompany = [6,4,2,1,5,10,7,3,6];
+        let myMoney=myCompany.map((value,key)=>{
+            if(value<= 4){
+            return value*2;
+            }else{
+                return 1;
+            }
+        });
+        console.log(myCompany);
+
+        // 篩選:filter
+        let filterArr= myCompany.filter((value,key)=>{
+            return value<5;
+        });
+        console.log(filterArr);
+
+        // indexof用value去找key,第二個參數可以指定從第幾個開始
+        let index = myCompany.indexOf(6,2);
+        console.log(index);//8(第9個)
+        
+        // reduce return一個個value,所以console的值在裡面
+        // 500是初始值
+        // currentValue是我現在的value
+        //total(前) value  total(後)
+        //500        6       506
+        console.log("這裡的myCompany = [6,4,2,1,5,10,7,3,6];");
+        let getSum = myCompany.reduce(( total,currentValue,currentIndex)=>{
+            console.log("total",total);
+            console.log("currentValue",currentValue);
+            return total+currentValue;
+            
+
+        },500);
+        console.log("我是最後的getsum",getSum);
+
+    </script>
+</body>
+</html>

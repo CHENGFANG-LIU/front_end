@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        myobj={
+            02:63,
+            jhjl:"kjkjk",
+        }
+        myarr=[
+            3,
+            {
+            02:63,
+            jhjl:"kjkjk",
+        }
+        ]
+        console.log(typeof(myobj));
+        console.log(typeof(myarr));
+        console.log(Array.isArray(myobj));
+        console.log(Array.isArray(myarr));
+       
+        myarr.forEach(element => {
+            console.log(element);
+        });
+        myobj.forEach(element => {
+            console.log(element);
+        });
+    </script>
+</body>
+</html>

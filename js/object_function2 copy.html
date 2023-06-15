@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="chinese">
+    <input id="english">
+    <input id="math">
+    <button id="show">顯示總和與平均</button>
+    <div id="total"></div>
+    <div id="avg"></div>
+    <script>
+       const chinese= document.getElementById('chinese');
+       let english=document.getElementById('english');
+       let math=document.getElementById('math');
+       
+        document.getElementById('show').addEventListener('click',function(){
+            let myObj={
+            mychinese:chinese.value,
+            myenhlish:english.value,
+            mymath:math.value,
+            mysum(){
+                return Number(this.mychinese)+Number(this.myenhlish)+Number(this.mymath);
+            },
+            myavg(){
+                console.log(this.mysum());
+                return this.mysum()/3;
+            },
+        }
+        let totalBtn=myObj.mysum();
+        let avgBtn=myObj.myavg();
+        document.getElementById('total').innerText=totalBtn;
+        document.getElementById('avg').innerText=avgBtn;
+       });
+
+
+
+
+
+    </script>
+</body>
+</html>

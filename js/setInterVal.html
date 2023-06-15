@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="mybtn">mybtn</button>
+    <p id="result"></p>
+    <p id="count_place"></p>
+    <button onclick="stopbtn()">stopbtn</button>
+    <script>
+        let mybtn=document.getElementById("mybtn");
+        let result=document.getElementById("result");
+        let count_place=document.getElementById("count_place");
+        let count=10;
+        let mcount;
+        let first=true;
+        function start(){
+            mcount=setInterval(()=>{
+            
+               
+            count_place.innerText=count;
+            count=count-1;
+            if(count==-1){
+            clearInterval(mcount);
+           
+        }
+        
+        }
+        , 1000);
+        }
+        
+        mybtn.addEventListener("click",function(){
+            // clearInterval連續中斷
+            result.innerText='點擊了';
+            
+            
+            if(first==false){
+return false;
+            }
+            start();
+            first=false;
+            console.log("click");
+      
+        });
+        function stopbtn(){
+            // mycount寫在click找不到，stopbtn放click外面的也找不到
+            // ，所以把mycount拉到addEventListener外面
+            clearInterval(mcount);
+            console.log("stop");
+            
+        }
+        
+        
+    </script>
+    
+</body>
+</html>

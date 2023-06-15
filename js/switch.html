@@ -47,10 +47,48 @@
 
 
 
+// 省略break,故意讓結果得到兩個case，例如滿額贈壘贈
 
+let shopping_bill=7000;
+            
+            switch (shopping_bill){
+                case shopping_bill=10000:
+                    console.log("滿額禮第一階段");
+                    break;
+                case shopping_bill>6000:
+                console.log("滿額禮第二階段");
+                break;
+                case shopping_bill>3000:
+                console.log("滿額禮第三階段");
+                break;
+                case shopping_bill>1000:
+                console.log("滿額禮第四階段");
+                break;
+            }
+            
+        
+// 省略break,故意讓多個case得到一個結果，例如抽到號碼4.5.6都是同一個獎
 
-
-
+let level=2;
+            
+            switch (level){
+                case 1:
+                    console.log("頭獎");
+                    break;
+                
+                case 2:
+                    console.log("二獎");
+                    break;
+                    
+                case 3:
+                    console.log("參獎");
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    console.log("普獎");
+                
+            }
 
 
     </script>

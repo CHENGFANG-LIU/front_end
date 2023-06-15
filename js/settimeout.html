@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="mybtn">mybtn</button>
+    <p id="result"></p>
+    <script>
+        let mybtn=document.getElementById("mybtn");
+        let result=document.getElementById("result");
+        mybtn.addEventListener("click",function(){
+            // setTimeout(function,秒數)
+            setTimeout(()=>{result.innerText='點擊了';}, 5000);
+        }
+
+        );
+    </script>
+    
+</body>
+</html>

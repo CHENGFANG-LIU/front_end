@@ -10,10 +10,12 @@
     <input type="text"><input type="text"><input type="text"><input type="text"><input type="text">
     <script>
         let inputAll=document.querySelectorAll('input');
-        inputAll.forEach((one)=>{
+        // index從0開始數
+        inputAll.forEach((one,index)=>{
             one.addEventListener('focus',()=>{
                 one.style.backgroundColor='red';
                 console.log(this);
+                console.log(index);
             })
             one.addEventListener('focusout',()=>{
                 one.style.backgroundColor='';

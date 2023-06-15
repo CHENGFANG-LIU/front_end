@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- window.location.href是bom裡的function -->
+    <button id="bt01">按下顯示網址</button>
+    <div id="url01"></div>
+    <script>
+        let url01=document.getElementById("url01");
+        
+        document.getElementById("bt01").addEventListener(
+            "click",()=>{
+                let url_now=window.location.href;
+                url01.innerText=url_now;
+                console.log("clicl ok");
+            }
+        );
+    </script>
+</body>
+</html>

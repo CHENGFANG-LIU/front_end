@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var a1=2;
+var a3=22;
+function aa1(){
+    var a1=10;
+    var a2=10;
+    console.log("var外面宣告2裡面宣告10console裡面的時候a1是"+a1);
+    console.log("var外面宣告22console裡面的時候是"+a3);
+}
+aa1();
+console.log("var外面宣告2裡面宣告10console外面的時候a1是"+a1);
+console.log("var裡面宣告10console外面的時候是吃不到");
+
+let g2=2;
+let g3=22;
+function gg2(){
+    let g2=10;
+    let g1=10;
+    console.log("let外面宣告2裡面宣告10console裡面的時候g2是"+g2);
+    console.log("let外面宣告22console裡面的時候是"+g3);
+}
+console.log("let外面宣告2裡面宣告10console外面的時候g2是"+g2);
+console.log("let裡面宣告10console外面的時候是吃不到");
+gg2();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="workDays">
+    <input id="pay">
+    <button id="show">顯示薪水</button>
+    <div id="total"></div>
+    <script>
+       let workDays= document.getElementById('workDays');
+       let pay=document.getElementById('pay');
+       let days=0;
+       let salaryEachDay=0;
+        document.getElementById('show').addEventListener('click',function(){
+            let myObj={
+            name:'amy',
+            mobile:'0911-111-111',
+            days:workDays.value,
+            salaryEachDay:pay.value,
+            total:function (){
+             return this.days*this.salaryEachDay;
+
+            },
+        }
+        let totalBtn=myObj.total();
+        
+        document.getElementById('total').innerText=totalBtn;
+       });
+
+
+
+
+
+    </script>
+</body>
+</html>

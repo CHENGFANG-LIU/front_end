@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="bt01">按下replace不能回上一頁</button>
+    <button id="bt02">按下assign能回上一頁</button>
+    <script>
+        
+        
+        document.getElementById("bt01").addEventListener(
+            "click",()=>{
+                window.location.replace("https://www.w3schools.com/js/js_window.asp");
+            }
+        );
+        document.getElementById("bt02").addEventListener(
+            "click",()=>{
+                window.location.assign("https://www.w3schools.com/js/js_window.asp");
+            }
+        );
+    </script>
+</body>
+</html>
