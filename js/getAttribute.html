@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        #mybtn{
+            width: 100px;
+            height: 50px;
+            background-color: aliceblue;
+        }
+        #mybox{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(48, 141, 223);
+        }
+    </style>
+</head>
+<body>
+    <div id="mybtn" data-box="#mybox" >button</div>
+    <br>
+    <div id="mybox" ></div>
+    <script>
+        let mybtn=document.getElementById("mybtn");
+        let mybox=document.getElementById("mybox");
+        mybtn.addEventListener("click",function(){
+            let dataBox=this.getAttribute("data-box");
+            // console.log(dataBox);
+            let target = document.querySelector(dataBox);
+            console.log(target); 
+target.setAttribute("class","bg-danger");
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

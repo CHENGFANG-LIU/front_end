@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // 原生
+        const jso = document.getElementById("demo");
+        console.log("jso"+jso);
+        // jQuery
+        // $(document).ready等HTML先跑好再載入function
+        // 也可以用$(function(){})
+        $(document).ready(function () {
+            const jqo = $("#demo");
+            console.log("jgo"+jqo);
+        }
+
+        );
+    </script>
+
+
+</body>
+
+</html>
