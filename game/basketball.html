@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .container-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div style="font-size: 65px;flex-basis: 10vh;">投籃大賽</div>
+        <div class="container" style="flex-basis: 50vh;border: 1px solid black;width: 600px;">
+            <div style="font-size: 20px;flex-basis: 10vh;">分數</div>
+
+            <div style="font-size: 20px;flex-basis: 10vh;">歷史最高分數</div>
+            <div style="font-size: 20px;flex-basis: 10vh;">22</div>
+            <div id="score">0</div>
+            <div style="border: 1px solid black;width: 20px;height: 0px;"></div>
+            <div id="timer">60</div>
+        </div>
+        <div class="container-row" style="border: 1px solid black;width: 600px;">
+            <button id="starb">開始</button>
+            <button id="inb">進球</button>
+            <button id="reb">重置</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        // let scoreNow = 2;
+
+        // let countTime = 59;
+        // $(document).ready(function () {
+        //     $("#inb").hide();
+        //     $("#starb").click(function () {
+        //         $("#inb").show();
+        //         $("#starb").hide();
+        //         const myI = setInterval(() => {
+
+        //             $("#timer").text(countTime)
+        //             if (countTime > 30) {
+        //                 countTime = countTime - 1;
+        //                 $("#inb").click((event) => {
+        //                     event.stopPropagation();
+        //                     $("#score").text(scoreNow);
+        //                     scoreNow = scoreNow + 2;
+
+
+        //                 });
+        //             } else if (countTime > 0) {
+        //                 countTime = countTime - 1;
+        //                 $("#inb").click((event) => {
+        //                     event.stopPropagation();
+        //                     $("#score").text(scoreNow);
+        //                     scoreNow = scoreNow + 3;
+
+
+        //                 });
+        //             } else {
+        //                 setInterval(myI)
+        //             }
+
+
+
+
+        //         }, 1000)
+
+        //     })
+
+
+        // if (countTime > 50) {
+        //     $("#inb").click(() => {
+        //         $("#score").text(scoreNow);
+        //         scoreNow = scoreNow + 2;
+        //         console.log("50")
+        //     });
+        // } else {
+        //     $("#inb").click(() => {
+        //         $("#score").text(scoreNow);
+        //         scoreNow = scoreNow + 3;
+
+
+        //     });
+
+        // }
+
+
+        // }
+
+        // );
+
+        $(document).ready(function () {
+            $("#inb").hide();
+            $("#").click(function () {
+                $("#inb").show();
+                $("#starb").hide();
+            });
+
+            let scoreNow = 2;
+            let countTime = 59;
+
+            $("#inb").click(function (event) {
+                event.stopPropagation();
+                if (countTime > 30) {
+                    $("#score").text(scoreNow);
+                    scoreNow = scoreNow + 2;
+                    console.log(countTime)
+                } else if (countTime > 0) {
+                    $("#score").text(scoreNow);
+                    scoreNow = scoreNow + 3;
+                }
+            });
+
+            const myI = setInterval(() => {
+                $("#timer").text(countTime);
+                if (countTime > 0) {
+                    countTime = countTime - 1;
+                } else {
+                    clearInterval(myI);
+                }
+            }, 1000);
+        });
+    </script>
+
+
+</body>
+
+</html>

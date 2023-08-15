@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .mg1,
+        .mg2,
+        .mg3,
+        .mg4,
+        .mg5,
+        .mg6,
+        .mg7,
+        .mg8,
+        .mg9,
+        .mg0 {
+            background: url("./img/num2.png");
+            width: 100px;
+            height: 100px;
+
+        }
+
+        .mgd {
+            /* 符號 */
+            width: 50px;
+            height: 100px;
+            background: url("./img/num2.png");
+            background-position: -1000px;
+
+
+        }
+
+        /* 數字 */
+        .mg1 {
+            background-position: -100px;
+        }
+
+
+        .mg2 {
+            background-position: -200px;
+        }
+
+        .mg3 {
+            background-position: -300px;
+        }
+
+        .mg4 {
+            background-position: -400px;
+        }
+
+        .mg5 {
+            background-position: -500px;
+        }
+
+        .mg6 {
+            background-position: -600px;
+        }
+
+        .mg7 {
+            background-position: 350px;
+        }
+
+        .mg8 {
+            background-position: 250px;
+        }
+
+        .mg9 {
+            background-position: 150px;
+        }
+
+        .mg0 {
+            background-position: 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="mg1" id="mg1"></div>
+        <div class="mg2" id="mg2"></div>
+        <div class="mgd"></div>
+        <div class="mg3" id="mg3"></div>
+        <div class="mg4" id="mg4"></div>
+        <div class="mgd"></div>
+        <div class="mg5" id="mg5"></div>
+        <div class="mg6" id="mg6"></div>
+
+    </div>
+    <script>
+        function mytime() {
+            const d = new Date();
+            const hr = d.getHours();
+            const mymin = d.getMinutes();
+            const s = d.getSeconds();
+
+
+            const hr1 = Math.floor(hr / 10);
+            const hr2 = hr % 10;
+            const min1 = Math.floor(mymin / 10);
+            const min2 = mymin % 10;
+            const s1 = Math.floor(s / 10);
+            const s2 = s % 10;
+            console.log(min2);
+
+            const mg1 = document.getElementById("mg1");
+            const mg2 = document.getElementById("mg2");
+            const mg3 = document.getElementById("mg3");
+            const mg4 = document.getElementById("mg4");
+            const mg5 = document.getElementById("mg5");
+            const mg6 = document.getElementById("mg6");
+
+            mg1.setAttribute('class', `mg${hr1}`)
+            mg2.setAttribute('class', `mg${hr2}`)
+            mg3.setAttribute('class', `mg${min1}`)
+            mg4.setAttribute('class', `mg${min2}`)
+            mg5.setAttribute('class', `mg${s1}`)
+            mg6.setAttribute('class', `mg${s2}`)
+
+            const dots = document.querySelectorAll(".mgd")
+
+            dots[0].style.opacity = 1;
+            dots[1].style.opacity = 1;
+
+
+            setTimeout(() => {
+                dots[0].style.opacity = 0;
+                dots[1].style.opacity = 0;
+
+            }, 500)
+
+        }
+        mytime();
+        setInterval(mytime, 1000)
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
