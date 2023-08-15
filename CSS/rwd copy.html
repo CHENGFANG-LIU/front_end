@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,81 +8,101 @@
     <title>Document</title>
     <style>
         /* 電腦 */
-        .container{
+        .container {
             display: flex;
             flex-direction: row;
+            align-items: center;
             
-            
-            
-            
-            
-            
-        }
-        .item{
-            
-            
-            
+width: 1024px;
+
+
 
         }
-        .myDate{
+
+        .myDate {
             font-size: 15px;
             color: #0068C3;
             font-family: Arial;
             flex-basis: 20%;
 
         }
-        .title{
+
+        .title {
             font-size: 15px;
             color: #4D4B45;
             font-family: "微軟正黑體";
             flex-basis: 70%;
 
         }
-        .dash{
+
+        .dash {
             border: 1px dashed #DBDBDB;
-            width: 100px;
+            width: 60%;
         }
 
-        
-
-        /* 手機600 */
-        @media only screen and (max-width: 768px) {
-  
-            .container{
+        .container-c {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
-            padding: 1%;
-            margin: 5px auto;
-            
-            width: 480px;
             align-items: center;
             
         }
-        .item{
-            width: 200px;
-            height: 20vh;
-            margin: 3px;
+
+
+        /* 手機600 */
+        @media only screen and (max-width: 768px) {
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 1%;
+                margin: 5px auto;
+
+                width: 760px;
+                align-items: center;
+
+            }
+
             
-            
+            .myDate {
+            font-size: 15px;
+            color: #0068C3;
+            font-family: Arial;
+            flex-basis: 20%;
 
         }
-        
+
+        .title {
+            font-size: 15px;
+            color: #4D4B45;
+            font-family: "微軟正黑體";
+            flex-basis: 70%;
+
         }
 
+        }
     </style>
 </head>
-<body>
+
+<body class="container-c">
     <div class="container">
-        <div class="item myDate">2019-03-08</div><div class="item title">HTTPS-網路世界中的一層防護</div>
+        <div class="item myDate">2019-03-08</div>
+        <div class="item title">HTTPS-網路世界中的一層防護</div>
+
     </div>
     <div class="dash"></div>
     <div class="container">
-        <div class="item myDate">2019-02-15</div><div class="item title">使Open Source購物車的利弊分析(優點vs缺點)</div>
+        <div class="item myDate">2019-02-15</div>
+        <div class="item title">使Open Source購物車的利弊分析(優點vs缺點)</div>
+
     </div>
+    <div class="dash"></div>
     <div class="container">
-        <div class="item myDate">2019-01-30</div><div class="item title">Magento的惡意程式已偷偷洩漏您的信用卡資訊</div>
+        <div class="item myDate">2019-01-30</div>
+        <div class="item title">Magento的惡意程式已偷偷洩漏您的信用卡資訊</div>
+
     </div>
-    
+    <div class="dash"></div>
 </body>
+
 </html>
